@@ -101,6 +101,11 @@ public class Instance2 {
                }
         	  
         	  String b =  ":space_invader:  "+s+" :space_invader:  ";
+        	  try {
+				Thread.sleep(3*1000L);
+			} catch (InterruptedException e1) {
+				e1.printStackTrace();
+			}
         	  e.getClient().getChannelByID("263473469931520002").sendMessage(b);
           }	   		
     		
