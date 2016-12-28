@@ -86,7 +86,7 @@ public class Instance {
     	String message = e.getMessage().getContent().toLowerCase();
     	String s = null;
     	try { 	
-          if(e.getMessage().getChannel().getID().contains( "263473469931520002") || e.getMessage().getAuthor().getID().contains("263470559822610432") || e.getMessage().getAuthor().getID().contains("149510921524346880")){
+          if(e.getMessage().getChannel().getID().contains( "263473469931520002") || iuser.getID().contains("263470559822610432") || iuser.getID().contains("149510921524346880")){
         	  ChatterBotFactory factory = new ChatterBotFactory();
               ChatterBot bot1 = null;
               try {

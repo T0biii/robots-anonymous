@@ -83,9 +83,9 @@ public class Instance2 {
     public void onMessage(MessageReceivedEvent e) {
     	IUser iuser = e.getMessage().getAuthor();
     	String message = e.getMessage().getContent().toLowerCase();
-    	String s = message;
+    	String s = null;
     	try {    		       
-          if(e.getMessage().getChannel().getID().contains("263473469931520002") || e.getMessage().getAuthor().getID().contains("263469569199439873")){
+          if(e.getMessage().getChannel().getID().contains("263473469931520002") || iuser.getID().contains("263469569199439873")){
         	  ChatterBotFactory factory = new ChatterBotFactory();
               ChatterBot bot1 = null;
               try {
@@ -95,7 +95,7 @@ public class Instance2 {
                }
                ChatterBotSession bot1session = bot1.createSession();
                try {
-                   s = bot1session.think(s);
+                   s = bot1session.think(message);
                } catch (Exception e1) {
                    e1.printStackTrace();
                }
